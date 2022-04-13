@@ -1,14 +1,10 @@
-def Kilometres():  # Function for converting to kilometres
-    global miles
-    global kilometres
+def Kilometres():
     miles = entryBox.get()
     kilometres = float(miles) * 1.6093
     outputBox["text"] = str(miles) + " mile(s) is " + str(kilometres) + " kilometre(s)"
 
 
-def Miles():  # Function for converting to miles
-    global miles2
-    global kilometres2
+def Miles():
     kilometres2 = entryBox2.get()
     miles2 = float(kilometres2) * 0.6214
     outputBox2["text"] = (
@@ -16,18 +12,15 @@ def Miles():  # Function for converting to miles
     )
 
 
-# Setting the original values for the distances so they can be used in the GUI as soon as it starts up
 miles = 0
 kilometres = 0
 miles2 = 0
 kilometres2 = 0
 
-# Setting up the window
 window = Tk()
 window.title("Distance Converter")
 window.geometry("600x400")
 
-# Creating the messages, boxes and buttons required for converting to kilometres
 label = Label(window, text="Convert from miles to kilometres:")
 label.pack()
 
@@ -42,7 +35,6 @@ outputBox = Message(
 )
 outputBox.pack()
 
-# Creating the messages, boxes and buttons required for converting to miles
 label2 = Label(window, text="Convert from kilometres to miles:")
 label2.pack()
 
